@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyBot — The Discord Bot for Your Server</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <header class="navbar">
+    <a class="logo" href="#">
+      <div class="logo-mark">M</div>
+      <span>MyBot</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#commands">Commands</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div style="display:flex;gap:0.6rem;align-items:center">
+      <a class="btn btn-ghost" href="dashboard.html">Dashboard</a>
+      <a id="nav-invite-btn" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Add to Discord</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="badge">✦ Free &amp; Open Source</div>
+        <h1>The Discord bot<br /><span class="gradient-text">your server deserves.</span></h1>
+        <p class="hero-sub">
+          Powerful slash commands, instant responses, zero setup.<br />
+          Add MyBot to your server in one click.
+        </p>
+        <div class="hero-actions">
+          <a id="invite-btn" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.04.033.05a19.91 19.91 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            Add to Discord
+          </a>
+          <a class="btn btn-outline" href="#commands">View Commands</a>
+        </div>
+        <p class="hero-note">Works on any server · No account required</p>
+      </div>
+    </section>
+
+    <!-- ── Stats bar ── -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-number" id="server-count">—</span>
+        <span class="stat-label">Servers</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">13</span>
+        <span class="stat-label">Commands</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">Free</span>
+        <span class="stat-label">Always</span>
+      </div>
+    </div>
+
+    <!-- ── Features ── -->
+    <section class="features" id="features">
+      <div class="section-label">Why MyBot?</div>
+      <h2 class="section-title">Everything you need,<br />nothing you don't.</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Responds in milliseconds. Low-latency hosting means no waiting around for the bot to wake up.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Permission-Aware</h3>
+          <p>Commands respect Discord's role system. Sensitive commands require the right server permissions automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Slash Commands</h3>
+          <p>Native Discord slash commands with autocomplete — no prefix memorization, no typos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Commands ── -->
+    <section class="commands" id="commands">
+      <div class="section-label">Slash Commands</div>
+      <h2 class="section-title">Type <code class="inline-code">/</code> to get started.</h2>
+      <div class="command-list">
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/ping</span>
+          </div>
+          <div class="command-right">
+            <p>Check whether the bot is online and see the current API response latency.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/help</span>
+          </div>
+          <div class="command-right">
+            <p>Get a private list of all available commands with descriptions. Only visible to you.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/say</span>
+            <span class="cmd-param">message</span>
+          </div>
+          <div class="command-right">
+            <p>Make the bot send a message in the current channel.</p>
+            <span class="cmd-perm">Requires Manage Messages</span>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/userinfo</span>
+            <span class="cmd-param">user?</span>
+          </div>
+          <div class="command-right">
+            <p>Show account details for any server member — join date, top role, account age.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/serverinfo</span>
+          </div>
+          <div class="command-right">
+            <p>Display stats for the current server: member count, channel count, creation date.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/alarm</span>
+            <span class="cmd-param">minutes</span>
+            <span class="cmd-param">message</span>
+          </div>
+          <div class="command-right">
+            <p>Set a reminder. The bot will ping you in this channel after the specified number of minutes (1–1440).</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/dice</span>
+            <span class="cmd-param">sides?</span>
+            <span class="cmd-param">count?</span>
+          </div>
+          <div class="command-right">
+            <p>Roll one or more dice. Defaults to a single d6. Supports up to 10 dice with up to 100 sides each.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/funfact</span>
+          </div>
+          <div class="command-right">
+            <p>Get a random fun fact picked from a curated list of 28.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/poll</span>
+            <span class="cmd-param">question</span>
+            <span class="cmd-param">option1</span>
+            <span class="cmd-param">option2</span>
+          </div>
+          <div class="command-right">
+            <p>Create a poll with 2–4 options. The bot posts the poll and adds number reactions automatically so members can vote.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/coinflip</span>
+          </div>
+          <div class="command-right">
+            <p>Flip a coin and get heads or tails.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/joke</span>
+          </div>
+          <div class="command-right">
+            <p>Get a random joke — setup and punchline delivered in an embed.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/quote</span>
+          </div>
+          <div class="command-right">
+            <p>Get a random inspirational quote from a curated list.</p>
+          </div>
+        </div>
+
+        <div class="command-row">
+          <div class="command-left">
+            <span class="cmd-tag">/announce</span>
+            <span class="cmd-param">title</span>
+            <span class="cmd-param">message</span>
+            <span class="cmd-param">color?</span>
+          </div>
+          <div class="command-right">
+            <p>Post a formatted announcement embed in the channel with a title, body, and optional accent color.</p>
+            <span class="cmd-perm">Requires Manage Messages</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ── -->
+    <section class="cta-banner">
+      <div class="cta-inner">
+        <h2>Ready to add MyBot?</h2>
+        <p>Join thousands of servers already using MyBot. It takes less than 10 seconds.</p>
+        <a id="cta-invite-btn" class="btn btn-primary btn-lg" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.04.033.05a19.91 19.91 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Add MyBot — It's Free
+        </a>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq" id="faq">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common questions.</h2>
+      <div class="faq-list">
+        <details>
+          <summary>
+            <span>How do I add the bot to my server?</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            Click <strong>Add to Discord</strong>, sign in if prompted, pick your server from the dropdown, and confirm the permissions. The bot will be online within seconds — no further setup needed.
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>Why does the bot need permissions?</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            Only the minimum are requested: <strong>Send Messages</strong>, <strong>Embed Links</strong>, and <strong>Read Message History</strong>. No administrator access is ever required.
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>How do I use a slash command?</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            Type <code>/</code> in any text channel where the bot is present. Discord will show an autocomplete menu — pick a command and fill in any options.
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>Can I limit the bot to specific channels?</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-body">
+            Yes. Go to <strong>Server Settings → Integrations → MyBot</strong> and configure per-command channel and role restrictions from there.
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#">
+          <div class="logo-mark">M</div>
+          <span>MyBot</span>
+        </a>
+        <p>A free, open-source Discord bot built with discord.js.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Bot</h4>
+          <a href="#commands">Commands</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="https://discord.com/developers/docs/intro" target="_blank" rel="noopener">Discord Docs</a>
+          <a href="https://discord.js.org" target="_blank" rel="noopener">discord.js</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MyBot. Built with discord.js.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
